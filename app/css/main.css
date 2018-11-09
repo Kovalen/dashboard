@@ -1,43 +1,216 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body,
 html {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: #555555;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: Arial; }
+  padding: 0; }
 
 ul {
   list-style-type: none; }
 
 a {
-  color: #000; }
+  text-decoration: none; }
 
-h1 {
-  color: #fff; }
+@font-face {
+  font-family: 'raleway';
+  src: url("../../fonts/raleway-medium-webfont.woff2") format("woff2"), url("../../fonts/raleway-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'raleway';
+  src: url("../../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../../fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'raleway';
+  src: url("../../fonts/raleway-semibold-webfont.woff2") format("woff2"), url("../../fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ElegantIcons';
+  src: url("../../fonts/ElegantIcons.eot");
+  src: url("../../fonts/ElegantIcons.eot?#iefix") format("embedded-opentype"), url("../../fonts/ElegantIcons.woff") format("woff"), url("../../fonts/ElegantIcons.ttf") format("truetype"), url("../../fonts/ElegantIcons.svg#ElegantIcons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 .header {
-  padding: 20px 15px; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
-.nav .nav-list li:hover {
-  color: yellow; }
+.logo {
+  background-color: #fff;
+  width: 290px;
+  padding: 15px 20px 15px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #f2f4f7; }
 
-.nav .nav-list li:last-child {
-  color: green; }
-  .nav .nav-list li:last-child:hover {
-    color: blue; }
+.logo__img {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  margin-right: 20px; }
 
-.nav .nav-list a {
-  color: #fff; }
-  .nav .nav-list a:hover {
-    color: red;
-    cursor: poi; }
+.logo__menu {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
 
-h1 {
-  font-size: 32px;
-  color: red;
-  margin: 20px;
-  background: #fff; }
+.search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  padding: 30px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .search .search__icon {
+    font-family: 'ElegantIcons';
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    margin-right: 20px;
+    color: #91969f; }
+  .search input {
+    color: #91969f;
+    width: 100%;
+    outline: none;
+    border: none;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+
+.user-alert-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.user__alert {
+  font-family: 'ElegantIcons';
+  padding: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff; }
+  .user__alert a {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    color: #91969f;
+    padding: 15px;
+    background-color: #f2f4f7;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    position: relative; }
+  .user__alert .user__alert-mail {
+    margin-right: 20px; }
+    .user__alert .user__alert-mail:after {
+      content: '';
+      height: 50px;
+      width: 1px;
+      background-color: #f2f4f7;
+      position: absolute;
+      top: 0;
+      left: -30px; }
+    .user__alert .user__alert-mail .alert-sum {
+      background-color: #1585ff; }
+  .user__alert .user__alert-bell:after {
+    content: '';
+    height: 50px;
+    width: 1px;
+    background-color: #f2f4f7;
+    position: absolute;
+    top: 0;
+    right: -30px; }
+  .user__alert .user__alert-bell .alert-sum {
+    background-color: #ff7473; }
+
+.alert-sum {
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  color: #fff;
+  font-family: 'raleway';
+  font-size: 13px;
+  text-align: center;
+  padding: 3px 0px; }
+
+.user__ava {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.user__ava-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #f2f4f7;
+  border: 3px solid #b0cff6;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
+@media (max-width: 865px) {
+  .search {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+        -ms-flex-order: 5;
+            order: 5;
+    border-bottom: 1px solid #f2f4f7; }
+  .logo__menu {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1; }
+  .header {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+@media (max-width: 597px) {
+  .logo {
+    width: 100%; }
+  .user-alert-wrap {
+    width: 100%;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .header {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+.wrapper {
+  font-family: 'raleway'; }

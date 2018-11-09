@@ -1,0 +1,150 @@
+// -------HEADER START----------
+.header {
+	display: flex;
+	flex-wrap: wrap;
+}
+.logo {
+	background-color: #fff;
+	width: 290px;
+	padding: 15px 20px 15px 30px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid $primaryBackground;
+}
+.logo__img {
+	align-self: center;
+	margin-right: 20px;
+}
+.logo__menu {
+	align-self: center;
+}
+
+		// header search start
+
+.search {
+	display: flex;
+	background-color: #fff;
+	padding: 30px;
+	flex-grow: 1;
+	.search__icon {
+		font-family: 'ElegantIcons';
+		align-self: center;
+		margin-right: 20px;
+		color: #91969f;
+	}
+	input {
+		color: #91969f;
+		width: 100%;
+		outline: none;
+		border: none;
+		align-self: center;
+	}
+}
+		// header search end
+
+		// header user-alert start
+
+.user-alert-wrap {
+	display: flex;
+}
+
+.user__alert {
+	font-family: 'ElegantIcons';
+	padding: 30px;
+	display: flex;
+	background-color: #fff;
+	a {
+		align-self: center;
+		color: #91969f;
+		padding: 15px;
+		background-color: $primaryBackground;
+		border-radius: 50%;
+		position: relative;
+	}
+	.user__alert-mail {
+		margin-right: 20px;
+		&:after {
+			content: '';
+			height: 50px;
+			width: 1px;
+			background-color: $primaryBackground;
+			position: absolute;
+			top: 0;
+			left: -30px;
+		}
+		.alert-sum {
+			background-color: $blueCustom;
+		}
+	}
+	.user__alert-bell {
+		&:after {
+			content: '';
+			height: 50px;
+			width: 1px;
+			background-color: $primaryBackground;
+			position: absolute;
+			top: 0;
+			right: -30px;
+		}
+		.alert-sum {
+			background-color: #ff7473;
+			}
+  }
+}
+.alert-sum {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	color: #fff;
+	font-family: 'raleway';
+	font-size: 13px;
+	text-align: center;
+	padding: 3px 0px;
+}
+		// header user-alert end
+
+		// ava start
+.user__ava {
+	padding: 20px 40px;
+	display: flex;
+}
+.user__ava-circle {
+	width: 50px;
+	height: 50px;
+	background-color: $primaryBackground;
+	border: 3px solid #b0cff6;
+	border-radius: 50%;
+	align-self: center;
+	box-sizing: content-box;
+}  		
+		//ava end
+
+		// -------HEADER END----------
+
+		@media (max-width: 865px) {
+			.search {
+				order: 5;
+				border-bottom: 1px solid $primaryBackground;
+			}
+			.logo__menu {
+				order: -1;
+			}
+			.header {
+				justify-content: space-between;
+			}
+		}
+		@media (max-width: 597px) {
+			.logo {
+				width: 100%;
+			}
+			.user-alert-wrap {
+				width: 100%;
+				justify-content: space-around;
+			}
+			.header {
+				justify-content: center;
+			}
+		}
